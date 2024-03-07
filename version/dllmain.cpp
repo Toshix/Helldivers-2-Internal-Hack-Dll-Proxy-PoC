@@ -104,7 +104,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
     Sleep(100);
 
 
-    //Show Console
+/*     //Show Console
     InitializeConsole();
     
     do {
@@ -142,7 +142,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
             break;
         }
 
-    } while (userInput != 13); // Loop until the Esc key is pressed
+    } while (userInput != 13); // Loop until the Esc key is pressed */
 
     for (size_t i = 0; i < checkboxes.size(); ++i) {
         if (checkboxes[i].checked)
