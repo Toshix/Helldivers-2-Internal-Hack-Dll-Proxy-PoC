@@ -18,7 +18,7 @@ HMODULE g_hModule;
 void InitializeConsole() {
     FILE* pFile = nullptr;
     AllocConsole();
-    //SetConsoleTitle(_XOR_(L"Helldivers 2 DLL Proxy PoC"));
+    SetConsoleTitle(_XOR_(L"HD 2 KN"));
     freopen_s(&pFile, _XOR_("CONOUT$"), _XOR_("w"), stdout);
 }
 
@@ -74,33 +74,33 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
     //Console Menu
     std::vector<Checkbox> checkboxes = { 
-          {_XOR_("Inf Health"), false}
+          {_XOR_("Inf Health"), true}
         , {_XOR_("Inf Grenades"), false}
-        , {_XOR_("Inf Grenades(Legit)"), false}
+        , {_XOR_("Inf Grenades(Legit)"), true}
         , {_XOR_("Inf Ammo"), false}
-        , {_XOR_("Inf Ammo(Legit)"), false}
+        , {_XOR_("Inf Ammo(Legit)"), true}
         , {_XOR_("Inf Syringes"), false}
-        , {_XOR_("Inf Syringes(Legit)"), false}
-        , {_XOR_("Inf Stamina"), false}
-        , {_XOR_("Inf Stratagems"), false}
-        , {_XOR_("MoveSpeed X6"), false}
+        , {_XOR_("Inf Syringes(Legit)"), true}
+        , {_XOR_("Inf Stamina"), true}
+        , {_XOR_("Inf Stratagems"), true}
+        , {_XOR_("MoveSpeed X6"), true}
         , {_XOR_("Inf Mission Time"), false}
         //, {"One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )", false}
-        , {_XOR_("No Reload"), false}
+        , {_XOR_("No Reload"), true}
         , {_XOR_("Max Resources"), false}
         , {_XOR_("Add 5 Samples"), false}
-        , {_XOR_("No Recoil"), false}
+        , {_XOR_("No Recoil"), true}
         , {_XOR_("Inf Backpack"), false}
         , {_XOR_("Inf Special Weapon"), false}
         , {_XOR_("No Laser Cannon Overheat"), false}
         , {_XOR_("Instant Railgun"), false}
-        , {_XOR_("Show All Map Icons"), false}
+        , {_XOR_("Show All Map Icons"), true}
         , {_XOR_("No Stationary Turret Overheat"), false}
         , {_XOR_("No Backpack Shield Cooldown"), false}
         , {_XOR_("No JetPack Cooldown"), false}
-        , {_XOR_("All Stratagems in Loadout"), false}
-        , {_XOR_("All Equipment in Armory"), false}
-        , {_XOR_("All Armor in Armory"), false}
+        , {_XOR_("All Stratagems in Loadout"), true}
+        , {_XOR_("All Equipment in Armory"), true}
+        , {_XOR_("All Armor in Armory"), true}
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
